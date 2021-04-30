@@ -26,7 +26,7 @@ const AllPackages = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get('/api/packages')
+      const { data } = await axios.get('https://icelanderapp.herokuapp.com/api/packages')
       const summerPackages = data.filter(item => {
         return (item.season === 'Summer')
       })

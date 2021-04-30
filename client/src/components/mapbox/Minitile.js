@@ -17,7 +17,7 @@ const Minitile = ({ _id, image, nameOfDestination, typeOfDestination, descriptio
     setSaved('Saved! View your profile to see your saved places.')
     setButton(false)
     const token = window.localStorage.getItem('token')
-    await axios.patch(`/api/places/${_id}`, { _id }, {
+    await axios.patch(`https://icelanderapp.herokuapp.com/api/places/${_id}`, { _id }, {
       headers: {
         Authorization: `Bearer ${token}`
       }

@@ -26,7 +26,7 @@ const MultipleMarkers = () => {
   useEffect(() => {
     console.log(placeData)
     const getData = async () => {
-      const response = await axios.get('/api/places')
+      const response = await axios.get('https://icelanderapp.herokuapp.com/api/places')
       setPlaceData(response.data)
     }
     getData()

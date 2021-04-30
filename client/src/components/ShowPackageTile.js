@@ -26,7 +26,7 @@ const ShowPackageTile = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get('/api/places')
+      const { data } = await axios.get('https://icelanderapp.herokuapp.com/api/places')
 
       const dayOne = data.filter(item => {
         return (item.packages.includes(parseInt(id)) && item.day1 === true)
@@ -92,7 +92,7 @@ const ShowPackageTile = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get('/api/packages')
+      const { data } = await axios.get('https://icelanderapp.herokuapp.com/api/packages')
       const durationData = data[id - 1].duration
       setDuration(durationData)
     }

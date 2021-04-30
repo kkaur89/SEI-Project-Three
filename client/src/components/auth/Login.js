@@ -20,7 +20,7 @@ const Login = () => {
   const handleSubmit = async event => {
     event.preventDefault()
     console.log('TOKEN>>>>')
-    const response = await axios.post('api/login', formData)
+    const response = await axios.post('https://icelanderapp.herokuapp.com/api/login', formData)
     window.localStorage.setItem('token', response.data.token)
 
     history.push('/profile')

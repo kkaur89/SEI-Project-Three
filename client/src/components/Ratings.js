@@ -25,7 +25,7 @@ const StarRating = ({ value, ..._id }) => {
     const choice = parseInt(event.target.getAttribute('data-star-id'))
     console.log(choice)
     const token = window.localStorage.getItem('token')
-    const response = await axios.post(`/api/places/${_id._id}/ratings`, { rating: choice }, {
+    const response = await axios.post(`https://icelanderapp.herokuapp.com/api/places/${_id._id}/ratings`, { rating: choice }, {
       headers: {
         Authorization: `Bearer ${token}`
       }

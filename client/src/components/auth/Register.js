@@ -28,7 +28,7 @@ const Register = () => {
   const handleSubmit = async event => {
     event.preventDefault()
     try {
-      const response = await axios.post('/api/register', formData)
+      const response = await axios.post('https://icelanderapp.herokuapp.com/api/register', formData)
       console.log(response)
     } catch (err) {
       console.log(err)

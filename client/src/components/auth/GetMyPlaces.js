@@ -7,7 +7,7 @@ const GetMyPlaces = (props) => {
 
   useEffect(() => {
     const getPlaces = async () => {
-      const { data } = await axios.get('/api/profile/getmyplaces')
+      const { data } = await axios.get('https://icelanderapp.herokuapp.com/api/profile/getmyplaces')
       const myPlaces = data.filter(item => {
         return props.savedPlaces.includes(item._id)
       })

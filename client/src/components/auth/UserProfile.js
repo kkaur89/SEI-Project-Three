@@ -11,7 +11,7 @@ const UserProfile = () => {
   useEffect(() => {
     const getUser = async () => {
       const token = window.localStorage.getItem('token')
-      const response = await axios.get('/api/profile', {
+      const response = await axios.get('https://icelanderapp.herokuapp.com/api/profile', {
         headers: {
           Authorization: `Bearer ${token}`
         }

@@ -24,7 +24,7 @@ const ShowPage = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get('/api/places')
+      const { data } = await axios.get(('https://icelanderapp.herokuapp.com/api/places'))
       // console.log('data', data)
       const packageData = data.filter(item => {
         return item.packages.includes(parseInt(id))
