@@ -165,3 +165,5 @@ We then moved on to creating our controllers and routes so that we could seed so
         console.log(err)
         return res.status(404).json({ message: 'Not Found' })
       }
+
+We also worked on the authorization controller for the user registration and login requests. We used jwt to create the token which would then be displayed in Insomnia and used to access certain features of the site.
