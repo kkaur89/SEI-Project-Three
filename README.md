@@ -133,3 +133,35 @@ We then went on to create the controllers, models and routes for the app. We cre
       email: { type: String, required: true, unique: true },
       password: { type: String, required: true },
     })
+
+
+We then moved on to creating our controllers and routes so that we could seed some data and test the requests in Insomnia. Each model had its own controller starting with a GET request got each or all packages/places:
+
+**Places Controller**
+
+    import Place from '../models/place.js'
+
+    //! INDEX Route
+    export const getAllPlaces = async (_req, res) => {
+      try {
+        const placesLibrary = await Place.find()
+        console.log('PLACES LIBRARY >>>', placesLibrary)
+        return res.status(200).json(placesLibrary)
+      } catch (err) {
+        console.log(err)
+        return res.status(404).json({ message: err.message })
+      }
+    }
+
+    //! INDIVIDUAL Place Route
+    export const getOnePlace = async (req, res) => {
+      try {
+        const { id } = req.params
+        const onePlace = await Place.findById(id)
+        console.log('THE PLACE WE WANT >>>', onePlace)
+        if (!onePlace) throw new Error()
+        return res.status(200).json(onePlace)
+      } catch (err) {
+        console.log(err)
+        return res.status(404).json({ message: 'Not Found' })
+      }
