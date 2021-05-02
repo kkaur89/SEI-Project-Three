@@ -89,3 +89,9 @@ Once we were signed off, we then got together and created a Trello board for the
 
 ![Screenshot 2021-05-02 at 16 34 34](https://user-images.githubusercontent.com/77445688/116818636-566d1200-ab64-11eb-87ec-c46581400a06.png)
 
+
+### Day Two and Three - Backend 
+
+The next two days were spent creating the backend together as a group. We wanted to ensure that everything was up and running, and any bugs we fixed together and promptly so that each person could take a front end component to render over the weeked.
+
+The project started by installing all of packages and dependencies that we would need for the app, ```yarn init, yarn add express, yarn add mongoose``` 
