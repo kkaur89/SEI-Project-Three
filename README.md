@@ -126,7 +126,7 @@ We then went on to create the controllers, models and routes for the app. We cre
       packageNumber: { type: Number, required: true, unique: true }
     })
     
-**User Model** For the user model we also added the virtual fields needed for password confirmation, as well as pre validate/save functions using bcrypt.
+**User Model**  - For the user model we also added the pre validate/save functions using bcryp for the password, as well as the virtual fields needed for password confirmation.
 
     const userSchema = new mongoose.Schema({
       username: { type: String, required: true, unique: true, maxlength: 40 },
