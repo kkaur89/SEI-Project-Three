@@ -94,4 +94,42 @@ Once we were signed off, we then got together and created a Trello board for the
 
 The next two days were spent creating the backend together as a group. We wanted to ensure that everything was up and running, and any bugs we fixed together and promptly so that each person could take a front end component to render over the weeked.
 
-The project started by installing all of packages and dependencies that we would need for the app, ```yarn init, yarn add express, yarn add mongoose``` 
+The project started by installing all of packages and dependencies that we would need for the app, ```yarn init, yarn add express, yarn add mongoose``` . To add our basic config, we created an index.js file which held all of our functinality for the server.
+
+We then went on to create the controllers, models and routes for the app. We created the three key Models; Places, Packages and Users:
+
+**Places Model**
+
+    const placeSchema = new mongoose.Schema({
+      nameOfDestination: { type: String, required: true },
+      typeOfDestination: { type: String, required: true },
+      longitude: { type: Number, required: true },
+      latitude: { type: Number, required: true },
+      description: { type: String, required: true },
+      image: { type: String, required: true },
+      icon: { type: String, required: true },
+      packageId: { type: Number },
+      winterAccess: { type: Boolean, required: true },
+      star: { type: String }
+    }
+    
+**Packages Model**
+
+    const packageSchema = new mongoose.Schema({
+      name: { type: String, required: true, unique: true },
+      price: { type: Number, required: true },
+      description: { type: String },
+      duration: { type: Number, required: true },
+      image: { type: String, required: true },
+      reviewRating: { type: Number },
+      season: { type: String },
+      packageNumber: { type: Number, required: true, unique: true }
+    })
+    
+**User Model**
+
+    const userSchema = new mongoose.Schema({
+      username: { type: String, required: true, unique: true, maxlength: 40 },
+      email: { type: String, required: true, unique: true },
+      password: { type: String, required: true },
+    })
