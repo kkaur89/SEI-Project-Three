@@ -5,7 +5,7 @@
 - Project Overview
 - Project Brief
 - Technologies Used
-- Project Timeline - 1 Week
+- Project Timeline - 9 days
 - Bugs
 - Wins and Challenges
 - Future Improvements
@@ -40,7 +40,7 @@ Back-end:
 - Express
 - Bcrypt
 - Body-parser
-- Mongoose
+- Mongoose/MoongoDB
 - jsonwebtoken
 
 Frontend:
@@ -65,5 +65,28 @@ Development tools:
 - Heroku (deployment)
 - Trello Board (planning and timeline)
 - Excalidraw (wireframing)
+
+
+## Project Timeline - 9 days
+
+### Day One - Planning
+
+The first day was spent on planning the project. We created a google doc, outlining a plan for the key areas of focus:
+
+- MVP - What are the basic features we want the user to be able to access?
+- Components that we would then need in the front end to support these features, and how would they link to each other.
+- Building the API - all the endpoints we would need, and what the dataset would look like for each endpoint.
+- The models in the backend and the relationships between them.
+- Packages that we would need to support our app.
+
+The next step was to create a wireframe based on the MVP features we landed on. We used Excalidraw for the first time, this app was perfect for allowing us all to be collaborative and evryone to be ale to see live how the site would look.
+
+![Iceland Wireframe  (1)](https://user-images.githubusercontent.com/77445688/116818420-1ce7d700-ab63-11eb-863f-65989e1800b5.png)
+
+
+Once we were signed off, we then got together and created a Trello board for the project outline all the tasks needed to achieve MVP and also added additonal feautres if we had time. 
+
+
+
 
 
