@@ -79,7 +79,7 @@ The first day was spent on planning the project. We created a google doc, outlin
 - The models in the backend and the relationships between them.
 - Packages that we would need to support our app.
 
-The next step was to create a wireframe based on the MVP features we landed on. We used Excalidraw for the first time, this app was perfect for allowing us all to be collaborative and evryone to be ale to see live how the site would look.
+The next step was to create a wireframe based on the MVP features we landed on. We used Excalidraw for the first time, this app was perfect for allowing us all to be collaborative, we took a few components each and then reviewed the wireframe together and made any neccessary updates.
 
 ![Iceland Wireframe  (1)](https://user-images.githubusercontent.com/77445688/116818420-1ce7d700-ab63-11eb-863f-65989e1800b5.png)
 
@@ -87,6 +87,5 @@ The next step was to create a wireframe based on the MVP features we landed on. 
 Once we were signed off, we then got together and created a Trello board for the project outline all the tasks needed to achieve MVP and also added additonal feautres if we had time. 
 
 
-
-
+![Screenshot 2021-05-02 at 16 34 34](https://user-images.githubusercontent.com/77445688/116818636-566d1200-ab64-11eb-87ec-c46581400a06.png)
 
