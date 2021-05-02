@@ -84,7 +84,7 @@ The next step was to create a wireframe based on the MVP features we landed on. 
 ![Iceland Wireframe  (1)](https://user-images.githubusercontent.com/77445688/116818420-1ce7d700-ab63-11eb-863f-65989e1800b5.png)
 
 
-Once we were signed off, we then got together and created a Trello board for the project outline all the tasks needed to achieve MVP and also added additonal feautres if we had time. 
+Once we were signed off, we then got together and created a Trello board for the project outline all the tasks needed to achieve MVP and also added additonal feautres if we had time. After the creating the Trello board, we then all took a dataset each needed to create a list of places which would then be used to create the tour packages. We split the data by Hotels, Restaurants, Volcanos and Attractions, ensuring we had the longitude and latitude of each so we could render the location on the map.
 
 
 ![Screenshot 2021-05-02 at 16 34 34](https://user-images.githubusercontent.com/77445688/116818636-566d1200-ab64-11eb-87ec-c46581400a06.png)
