@@ -167,3 +167,11 @@ We then moved on to creating our controllers and routes so that we could seed so
       }
 
 We also worked on the authorization controller for the user registration and login requests. We used jwt to create the token which would then be displayed in Insomnia and used to access certain features of the site.
+
+After we tested that all routes worked in Insomnia, we installed the front end section together and attemtped rendering an interactive map which would be later used to render all places as icons on the map. We installed the front end by running ```npx create-react-app client —template cra-template-ga-ldn-projects```, and then updated the the port to match the backend.
+
+For the interactive map, we used the MapBox API and saved our token in our .env file.
+
+
+
+
