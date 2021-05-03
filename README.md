@@ -79,12 +79,12 @@ The first day was spent on planning the project. We created a google doc, outlin
 - The models in the backend and the relationships between them.
 - Packages that we would need to support our app.
 
-The next step was to create a wireframe based on the MVP features we landed on. We used Excalidraw for the first time, this app was perfect for allowing us all to be collaborative, we took a few components each and then reviewed the wireframe together and made any neccessary updates.
+The next step was to create a wireframe based on the MVP features we landed on. We used Excalidraw for the first time, this app was perfect for allowing us all to be collaborative, we took a few components each and then reviewed the wireframe together and made any necessary updates.
 
 ![Iceland Wireframe  (1)](https://user-images.githubusercontent.com/77445688/116818420-1ce7d700-ab63-11eb-863f-65989e1800b5.png)
 
 
-Once we were signed off, we then got together and created a Trello board for the project outline all the tasks needed to achieve MVP and also added additonal feautres if we had time. After the creating the Trello board, we then all took a dataset each needed to create a list of places which would then be used to create the tour packages. We split the data by Hotels, Restaurants, Volcanos and Attractions, ensuring we had the longitude and latitude of each so we could render the location on the map.
+Once we were signed off, we then got together and created a Trello board for the project outline all the tasks needed to achieve MVP and also added additional features if we had time. After creating the Trello board, we then all took a dataset each needed to create a list of places which would then be used to create the tour packages. We split the data by Hotels, Restaurants, Volcanos and Attractions, ensuring we had the longitude and latitude of each so we could render the location on the map.
 
 
 ![Screenshot 2021-05-02 at 16 34 34](https://user-images.githubusercontent.com/77445688/116818636-566d1200-ab64-11eb-87ec-c46581400a06.png)
@@ -92,11 +92,12 @@ Once we were signed off, we then got together and created a Trello board for the
 
 ### Day Two and Three - Backend 
 
-The next two days were spent creating the backend together as a group. We wanted to ensure that everything was up and running, and any bugs we fixed together and promptly so that each person could take a front end component to render over the weeked.
+The next two days were spent creating the backend together as a group. We wanted to ensure that everything was up and running, and any bugs we fixed together promptly so that each person could take a front end component to render over the weeked.
 
-The project started by installing all of packages and dependencies that we would need for the app, ```yarn init, yarn add express, yarn add mongoose``` . To add our basic config, we created an index.js file which held all of our functinality for the server.
+The project started by installing all of the packages and dependencies that we would need for the app, ```yarn init, yarn add express, yarn add mongoose``` . To add our basic config, we created an index.js file which held all of our functionality for the server.
 
 We then went on to create the controllers, models and routes for the app. We created the three key Models; Places, Packages and Users:
+
 
 **Places Model**
 
@@ -126,7 +127,7 @@ We then went on to create the controllers, models and routes for the app. We cre
       packageNumber: { type: Number, required: true, unique: true }
     })
     
-**User Model**  - For the user model we also added the pre validate/save functions using bcryp for the password, as well as the virtual fields needed for password confirmation.
+**User Model**  - For the user model we also added the pre validate/save functions using bcrypt for the password, as well as the virtual fields needed for password confirmation.
 
     const userSchema = new mongoose.Schema({
       username: { type: String, required: true, unique: true, maxlength: 40 },
@@ -168,9 +169,10 @@ We then moved on to creating our controllers and routes so that we could seed so
 
 We also worked on the authorization controller for the user registration and login requests. We used jwt to create the token which would then be displayed in Insomnia and used to access certain features of the site.
 
-After we tested that all routes worked in Insomnia, we installed the front end section together and attemtped rendering an interactive map which would be later used to render all places as icons on the map. We installed the front end by running ```npx create-react-app client —template cra-template-ga-ldn-projects```, and then updated the the port to match the backend.
+After we tested that all routes worked in Insomnia, we installed the front end section together and attempted rendering an interactive map which would be later used to render all places as icons on the map. We installed the front end by running ```npx create-react-app client —template cra-template-ga-ldn-projects```, and then updated the port to match the backend.
 
 For the interactive map, we used the MapBox API and saved our token in our .env file.
+
 
 
 
