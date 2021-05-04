@@ -214,4 +214,4 @@ Two seperate comonents were created for this page. The main page which had the m
         </>
       )
 
-
+This was the first major hurdle I had come across, as the above code 
