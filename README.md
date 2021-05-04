@@ -173,7 +173,8 @@ After we tested that all routes worked in Insomnia, we installed the front end s
 
 For the interactive map, we used the MapBox API and saved our token in our .env file. The Viewport was set to the long and lat of Icleand, and each place that was seeded was renderd as an icon on the map. If you clicked on the icon, a card appears with the three tabs with information about that place. 
 
-![Screenshot 2021-05-04 at 09 30 30](https://user-images.githubusercontent.com/77445688/116978287-6ba88480-acbb-11eb-984e-fab1a2b0f04a.png)
+![Screenshot 2021-05-04 at 09 32 35](https://user-images.githubusercontent.com/77445688/116978524-b9bd8800-acbb-11eb-83eb-4fe8ffb5fbba.png)
+
 
 
 
