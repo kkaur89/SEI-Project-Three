@@ -176,8 +176,42 @@ For the interactive map, we used the MapBox API and saved our token in our .env 
 ![Screenshot 2021-05-04 at 09 32 35](https://user-images.githubusercontent.com/77445688/116978524-b9bd8800-acbb-11eb-83eb-4fe8ffb5fbba.png)
 
 
+### Day Four and Five - Frontend
+
+As we managed to render the main map together before the weekend, we then all took ownership of a seperate front end component to work on over the weekend, as well collecting more data to seed for the final version.
+
+I was responsible for creating the package show page. This page would be used to display the daily itinerary of the tour which would be rendered on top of the map, with the icons of the places that relate to that package only. The aim was to use Bootstrap Carousel to render each day seperately.
+
+Two seperate comonents were created for this page. The main page which had the map and the GET request to the API to render the iconc of the places relating to the package. The second component was used to pass through props and format the intinerary in the carousel, which was the ShowPackageTile component.
 
 
-
+      return (
+        <>
+          <Navbar className="nav-grey" />
+          <div className="map-container">
+            <ReactMapGL
+              {...viewPort}
+              onViewportChange={(viewPort) => setViewPort(viewPort)}
+              mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
+              height='100%'
+              width='100%'
+              mapStyle='mapbox://styles/mapbox/light-v10' >
+              {locations.map(location => {
+                return <Marker key={location._id} latitude={location.latitude} longitude={location.longitude}>
+                  <p>{location.icon}</p>
+                </Marker>
+              })
+              }
+            </ReactMapGL>
+            <div className="map-controller" id="no-scroll1" style={{ height: '87vh', overflowY: 'scroll' }}>
+              <h3 className="package-title-show" >{locations[0].packageName}</h3>
+              <h5 className="daily">Daily itinerary</h5>
+              <ShowPackageTile
+                key={location._id}
+                {...location} />
+            </div>
+          </div>
+        </>
+      )
 
 
