@@ -171,7 +171,10 @@ We also worked on the authorization controller for the user registration and log
 
 After we tested that all routes worked in Insomnia, we installed the front end section together and attempted rendering an interactive map which would be later used to render all places as icons on the map. We installed the front end by running ```npx create-react-app client —template cra-template-ga-ldn-projects```, and then updated the port to match the backend.
 
-For the interactive map, we used the MapBox API and saved our token in our .env file.
+For the interactive map, we used the MapBox API and saved our token in our .env file. The Viewport was set to the long and lat of Icleand, and each place that was seeded was renderd as an icon on the map. If you clicked on the icon, a card appears with the three tabs with information about that place. 
+
+![Screenshot 2021-05-04 at 09 30 30](https://user-images.githubusercontent.com/77445688/116978287-6ba88480-acbb-11eb-984e-fab1a2b0f04a.png)
+
 
 
 
