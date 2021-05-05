@@ -185,33 +185,28 @@ I was responsible for creating the package show page. This page would be used to
 Two seperate comonents were created for this page. The main page which had the map and the GET request to the API to render the iconc of the places relating to the package. The second component was used to pass through props and format the intinerary in the carousel, which was the ShowPackageTile component.
 
 
-      return (
-        <>
-          <Navbar className="nav-grey" />
-          <div className="map-container">
-            <ReactMapGL
-              {...viewPort}
-              onViewportChange={(viewPort) => setViewPort(viewPort)}
-              mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
-              height='100%'
-              width='100%'
-              mapStyle='mapbox://styles/mapbox/light-v10' >
-              {locations.map(location => {
-                return <Marker key={location._id} latitude={location.latitude} longitude={location.longitude}>
-                  <p>{location.icon}</p>
-                </Marker>
-              })
-              }
-            </ReactMapGL>
-            <div className="map-controller" id="no-scroll1" style={{ height: '87vh', overflowY: 'scroll' }}>
-              <h3 className="package-title-show" >{locations[0].packageName}</h3>
-              <h5 className="daily">Daily itinerary</h5>
-              <ShowPackageTile
-                key={location._id}
-                {...location} />
-            </div>
-          </div>
-        </>
+       return (
+         <>
+           <div className="map-container">
+           
+           <ReactMapGL
+               {...viewPort}
+               onViewportChange={(viewPort) => setViewPort(viewPort)}
+               mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
+               height='100%'
+               width='100%'
+               mapStyle='mapbox://styles/mapbox/streets-v11' >
+             </ReactMapGL>
+             
+             <div className="map-controller"> 
+               {packages.map(item => (
+                 <ShowPackageTile
+                   key={item._id}
+                   { ...packages}/>
+               )) }
+             </div> 
+           </div> 
+         </>
       )
-
+    
 This was the first major hurdle I had come across, as the above code 
