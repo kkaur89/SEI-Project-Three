@@ -36,11 +36,10 @@ Explore the full site **[here](https://icelander.netlify.app)**. You will need t
 Back-end:
 
 - Node.js
-- Mongodb
 - Express
 - Bcrypt
 - Body-parser
-- Mongoose/MoongoDB
+- Mongoose/MongoDB
 - jsonwebtoken
 
 Frontend:
@@ -49,19 +48,12 @@ Frontend:
 - Axios
 - Bootstrap
 - SCSS
-- Http-proxy-middleware
-- Nodemon
-- React Router Dom
 - React Mapbox GL
-- React rating stars component
 
 Development tools:
 
-- VS code
-- NPM
 - Insomnia
 - GitHub
-- Google Chrome dev tools
 - Heroku (deployment)
 - Trello Board (planning and timeline)
 - Excalidraw (wireframing)
