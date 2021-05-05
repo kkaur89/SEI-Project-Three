@@ -164,18 +164,19 @@ We also worked on the authorization controller for the user registration and log
 
 After we tested that all routes worked in Insomnia, we installed the front end section together and attempted rendering an interactive map which would be later used to render all places as icons on the map. We installed the front end by running ```npx create-react-app client —template cra-template-ga-ldn-projects```, and then updated the port to match the backend.
 
-For the interactive map, we used the MapBox API and saved our token in our .env file. The Viewport was set to the long and lat of Icleand, and each place that was seeded was renderd as an icon on the map. If you clicked on the icon, a card appears with the three tabs with information about that place. This was the first time using Bootstrap, so it took some time getting used the imports at the top from Bootstrap in order for the Card to render.
+For the interactive map, we used the MapBox API and saved our token in our .env file. The Viewport was set to the long and lat of Iceland, and each place that was seeded was rendered as an icon on the map. If you click on the icon, a card appears with the three tabs with information about that place. This was the first time using Bootstrap, so it took some time getting used to the imports at the top from Bootstrap in order for the Card to render.
 
 ![Screenshot 2021-05-04 at 09 32 35](https://user-images.githubusercontent.com/77445688/116978524-b9bd8800-acbb-11eb-83eb-4fe8ffb5fbba.png)
 
 
 ### Day Four and Five - Frontend
 
-As we managed to render the main map together before the weekend, we then all took ownership of a seperate front end component to work on over the weekend, as well collecting more data to seed for the final version.
+As we managed to render the main map together before the weekend, we then all took ownership of a separate front end component to work on over the weekend, as well collecting more data to seed for the final version.
 
-I was responsible for creating the package show page. This page would be used to display the daily itinerary of the tour which would be rendered on top of the map, with the icons of the places that relate to that package only. The aim was to use Bootstrap Carousel to render each day seperately.
+I was responsible for creating the package show page. This page would be used to display the daily itinerary of the tour which would be rendered on top of the map, with the icons of the places that relate to that package only. The aim was to use Bootstrap Carousel to render each day separately.
 
-Two seperate components were created for this page. The main page which had the map and the GET request to the API to render the iconc of the places relating to the package. The second component was used to pass through props and format the intinerary in the carousel, which was the ShowPackageTile component.
+Two separate components were created for this page. The main page which had the map and the GET request to the API to render the icon of the places relating to the package. The second component was used to pass through props and format the itinerary in the carousel, which was the ShowPackageTile component.
+
 
       const [packages, setPackage] = useState(null)
 
@@ -211,7 +212,7 @@ Two seperate components were created for this page. The main page which had the 
          </>
       )
     
-This was the first major hurdle I had come across is that the above and below code meant that this component was rendering all the items in the array and I was not able to split out places using the array index by passing through props. The aim was to be able to render each day seperately.
+The first major hurdle I had come across was that the above and below code meant that this component was rendering all the items in the array and I was not able to split out places using the array index by passing through props. The aim was to be able to render each day separately.
 
         import React from 'react'
         import Media from 'react-bootstrap/Media'
@@ -240,11 +241,12 @@ This was the first major hurdle I had come across is that the above and below co
                </Media>
             )
 
-After a while of not being able to fix this solution, I spent the rest of my time working on the data that we would need to seed at the end as well as styling the map and the container that would hold the info of the intinerary.
+
+After a while of not being able to fix this solution, I spent the rest of my time working on the data that we would need to seed at the end as well as styling the map and the container that would hold the info of the itinerary.
 
 ### Day Six and Seven - Troubleshooting
 
-This day was spent trying find a way to connect the places to the packages model so that we could render them both on the front end. Two of us worked together on the ShowPackage page whilst the other members worked on rendering a list of packages in a separate component. We had to add more fields to each of the models for the relationship to work. The places model was refactored to the below:
+This day was spent trying to find a way to connect the places to the packages model so that we could render them both on the front end. Two of us worked together on the ShowPackage page whilst the other members worked on rendering a list of packages in a separate component. We had to add more fields to each of the models for the relationship to work. The places model was refactored to the below:
 
 **Places Model Update:**
 
@@ -277,7 +279,7 @@ This day was spent trying find a way to connect the places to the packages model
     
 This then meant that we were able to filter the data on the front end to only render the places with the days included in that package. The only negative to this was that if this place was to be used for a different package on a different day then that place would need to be duplicated with the correct true/false booleans for the day and package name.
 
-The code on the front end component was also updated to filter through the array of places not packages, and onnly return the places that match the package id which was passed into the component using Params.
+The code on the front end component was also updated to filter through the array of places not packages, and only return the places that match the package id which was passed into the component using Params.
 
     const ShowPage = () => {
 
@@ -298,4 +300,4 @@ The code on the front end component was also updated to filter through the array
 
 ### Day Eight - Finishing Touches
 
-This day was spent refining each of the components we hd managed to render successfully. The plan was add a directions API from Mapbox so that when the user clicked on a package, the daily itinerary would also show a route on the map for all of the places that exist in that package. Unforuntly we realised that the API was no longer supported and it was very unlcikely that we would be abloe to add this feature. A member of our group did email the 
+This day was spent refining each of the components we had managed to render successfully. The plan was to add a directions API from Mapbox so that when the user clicked on a package, the daily itinerary would also show a route on the map for all of the places that exist in that package. Unfortunately we realised that the route plug in for this API was deprecated and very unlikely that we would be able to add this feature. A member of our group did email the the developer, however we had to come up with a back up plan which was to add the FlyToInterpolator from React Map.
