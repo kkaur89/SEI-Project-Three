@@ -210,7 +210,7 @@ Two seperate components were created for this page. The main page which had the 
          </>
       )
     
-This was the first major hurdle I had come across is that the abiev and below code meant that this component was rendering all the items in the array and I was not able to split out places using the array index by passing through props. The aim was to be able to render each day seperately.
+This was the first major hurdle I had come across is that the above and below code meant that this component was rendering all the items in the array and I was not able to split out places using the array index by passing through props. The aim was to be able to render each day seperately.
 
         import React from 'react'
         import Media from 'react-bootstrap/Media'
@@ -239,8 +239,39 @@ This was the first major hurdle I had come across is that the abiev and below co
                </Media>
             )
 
-After a while of not being able to fix this solution, I spent the rest of my time working on the data that we would need to seed at the end.
+After a while of not being able to fix this solution, I spent the rest of my time working on the data that we would need to seed at the end as well as styling the map and the container that would hold the info of the intinerary.
 
 ### Day Six - Troubleshooting
 
-This day was spent trying find a way to connect the places to the packages model so that we could render them both on the front end. Myself and Paddy worked together on the ShowPackage page whilst the other memmerb worked on rendering a list of packages in a sepereate component.
+This day was spent trying find a way to connect the places to the packages model so that we could render them both on the front end. Myself and Paddy worked together on the ShowPackage page whilst the other members worked on rendering a list of packages in a sepereate component. We had to add more fields to each of the models for the relationship to work. The places model was refactored to the below:
+
+**Places Model Update:**
+
+    const placeSchema = new mongoose.Schema({
+      nameOfDestination: { type: String, required: true },
+      typeOfDestination: { type: String, required: true },
+      longitude: { type: Number, required: true },
+      latitude: { type: Number, required: true },
+      description: { type: String, required: true },
+      image: { type: String, required: true },
+      icon: { type: String, required: true },
+      packageId: { type: Number },
+      winterAccess: { type: Boolean, required: true },
+      star: { type: String },
+      day1: { type: Boolean, required: true },
+      day2: { type: Boolean, required: true },
+      day3: { type: Boolean, required: true },
+      day4: { type: Boolean, required: true },
+      day5: { type: Boolean, required: true },
+      day6: { type: Boolean, required: true },
+      day7: { type: Boolean, required: true },
+      day8: { type: Boolean, required: true },
+      day9: { type: Boolean, required: true },
+      day10: { type: Boolean, required: true },
+      packageNumber: { type: Number, required: true },
+      packages: [{ type: Number, required: true }],
+      packageName: [{ type: String, required: true }],
+      ratings: [ratingSchema]
+    })
+    
+This then meant that we were able to filter the data on the front end to only render the places with the days included in that package. The only negative to this was that if this place was to be used for a different package on a different day then that place would need to be duplicated with the correct true/false booleans for the day and package name.
