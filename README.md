@@ -182,8 +182,17 @@ As we managed to render the main map together before the weekend, we then all to
 
 I was responsible for creating the package show page. This page would be used to display the daily itinerary of the tour which would be rendered on top of the map, with the icons of the places that relate to that package only. The aim was to use Bootstrap Carousel to render each day seperately.
 
-Two seperate comonents were created for this page. The main page which had the map and the GET request to the API to render the iconc of the places relating to the package. The second component was used to pass through props and format the intinerary in the carousel, which was the ShowPackageTile component.
+Two seperate components were created for this page. The main page which had the map and the GET request to the API to render the iconc of the places relating to the package. The second component was used to pass through props and format the intinerary in the carousel, which was the ShowPackageTile component.
 
+      const [packages, setPackage] = useState(null)
+
+       useEffect(() => {
+         const getData = async () => {
+           const { data } = await axios.get('/api/packages')
+           setPackage(data)
+         }
+         getData()
+       }, []
 
        return (
          <>
@@ -209,4 +218,32 @@ Two seperate comonents were created for this page. The main page which had the m
          </>
       )
     
-This was the first major hurdle I had come across, as the above code 
+This was the first major hurdle I had come across, is that the above code which is an array map method for the GET request of the packages was rendering all places even though there was a link between the package and days through the id. Another issue was that the ShowPackageTile that was being passed into this component was also jusy rendering all the items in the array and I was not able to split out places using the array index. 
+
+        import React from 'react'
+        import Media from 'react-bootstrap/Media'
+
+
+        const ShowPackageTile = ( props ) => {
+
+           return (
+
+                <Media>
+                 <Media.Body>
+                   <h4>{props.title}</h4>
+                   <h5>{props.subTitle}</h5>
+                   <h6>{props.day[0]}</h6>
+                   <p>   
+                     <img
+                       width={250}
+                       height={150}
+                       className="float-left mr-2 mb-1"
+                       src={props.image[0]}
+                       alt="Generic placeholder"
+                     />
+                     {props.description[0]}
+                   </p>
+                 </Media.Body>
+               </Media>
+            )
+
