@@ -17,7 +17,7 @@ The concept for our app was driven by our common love for travelling. Iceland ca
 
 Once registered and logged in the user can rate a place on the map, and also save locations to their profile page.
 
-Explore the full site **[here](https://icelander.netlify.app)**. You will need to a log in to explore all features, feel free to use the below:
+Explore the full site **[here](https://icelander.netlify.app)**. A login is required to explore all features, feel free to use the below:
 
 - email: karen@email
 - password: pass
