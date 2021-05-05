@@ -8,6 +8,7 @@
 - Project Timeline - 9 days
 - Bugs
 - Wins and Challenges
+- Deployment
 - Future Improvements
 - Key Learnings
 
@@ -276,7 +277,7 @@ This day was spent trying find a way to connect the places to the packages model
     
 This then meant that we were able to filter the data on the front end to only render the places with the days included in that package. The only negative to this was that if this place was to be used for a different package on a different day then that place would need to be duplicated with the correct true/false booleans for the day and package name.
 
-The code on the front end compeonet was also updated to filter through the array of places not packages, and onnly return the places that match the package id which was passed into the componenet using Params.
+The code on the front end component was also updated to filter through the array of places not packages, and onnly return the places that match the package id which was passed into the component using Params.
 
     const ShowPage = () => {
 
