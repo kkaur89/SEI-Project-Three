@@ -326,3 +326,7 @@ The last day was mainly spent seeding the database with all the places, as prior
 - Add responsive design
 - Allow users to make a custom packages based on their saved locations.
 - Review the structure of the data to allow for much simpler code in the front end.
+
+## Key Learnings
+- My biggest takeaway from this project is the amount I have learn't about the relationships between the components on the front end, this was the first time I have seen a component being nested into another and then another. This was used to achieve the package page.
+- Also the importance of reading documentation to help with solutions, and the importance of console.logs when de-bugging.
