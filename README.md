@@ -295,3 +295,7 @@ The code on the front end component was also updated to filter through the array
         }
         getData()
       }, [])
+
+### Day Eight - Finishing Touches
+
+This day was spent refining each of the components we hd managed to render successfully. The plan was add a directions API from Mapbox so that when the user clicked on a package, the daily itinerary would also show a route on the map for all of the places that exist in that package. Unforuntly we realised that the API was no longer supported and it was very unlcikely that we would be abloe to add this feature. A member of our group did email the 
