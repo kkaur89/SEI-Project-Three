@@ -84,7 +84,7 @@ Once we were signed off, we then got together and created a Trello board for the
 
 ### Day Two and Three - Backend 
 
-The next two days were spent creating the backend together as a group. We wanted to ensure that everything was up and running, and any bugs we fixed together promptly so that each person could take a front end component to render over the weeked.
+The next two days were spent creating the backend together as a group. We wanted to ensure that everything was up and running, and any bugs we fixed together promptly so that each person could take a front end component to render over the weeked. This was also our first time using the development branch and feature branch, and therefore wanted to avoid as many merge conflicts as possible. We decided a leader between us, and then the rest of us followed the steps of cloning the original repo.
 
 The project started by installing all of the packages and dependencies that we would need for the app, ```yarn init, yarn add express, yarn add mongoose``` . To add our basic config, we created an index.js file which held all of our functionality for the server.
 
@@ -163,7 +163,7 @@ We also worked on the authorization controller for the user registration and log
 
 After we tested that all routes worked in Insomnia, we installed the front end section together and attempted rendering an interactive map which would be later used to render all places as icons on the map. We installed the front end by running ```npx create-react-app client —template cra-template-ga-ldn-projects```, and then updated the port to match the backend.
 
-For the interactive map, we used the MapBox API and saved our token in our .env file. The Viewport was set to the long and lat of Icleand, and each place that was seeded was renderd as an icon on the map. If you clicked on the icon, a card appears with the three tabs with information about that place. 
+For the interactive map, we used the MapBox API and saved our token in our .env file. The Viewport was set to the long and lat of Icleand, and each place that was seeded was renderd as an icon on the map. If you clicked on the icon, a card appears with the three tabs with information about that place. This was the first time using Bootstrap, so it took some time getting used the imports at the top from Bootstrap in order for the Card to render.
 
 ![Screenshot 2021-05-04 at 09 32 35](https://user-images.githubusercontent.com/77445688/116978524-b9bd8800-acbb-11eb-83eb-4fe8ffb5fbba.png)
 
@@ -210,7 +210,7 @@ Two seperate components were created for this page. The main page which had the 
          </>
       )
     
-This was the first major hurdle I had come across, is that the above code which is an array map method for the GET request of the packages was rendering all places even though there was a link between the package and days through the id. Another issue was that the ShowPackageTile that was being passed into this component was also jusy rendering all the items in the array and I was not able to split out places using the array index. 
+This was the first major hurdle I had come across is that the abiev and below code meant that this component was rendering all the items in the array and I was not able to split out places using the array index by passing through props. The aim was to be able to render each day seperately.
 
         import React from 'react'
         import Media from 'react-bootstrap/Media'
@@ -239,3 +239,8 @@ This was the first major hurdle I had come across, is that the above code which 
                </Media>
             )
 
+After a while of not being able to fix this solution, I spent the rest of my time working on the data that we would need to seed at the end.
+
+### Day Six - Troubleshooting
+
+This day was spent trying find a way to connect the places to the packages model so that we could render them both on the front end. Myself and Paddy worked together on the ShowPackage page whilst the other memmerb worked on rendering a list of packages in a sepereate component.
