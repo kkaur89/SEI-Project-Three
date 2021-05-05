@@ -298,6 +298,11 @@ The code on the front end component was also updated to filter through the array
         getData()
       }, [])
 
-### Day Eight - Finishing Touches
+### Day Eight and Nine - Finishing Touches
 
 This day was spent refining each of the components we had managed to render successfully. The plan was to add a directions API from Mapbox so that when the user clicked on a package, the daily itinerary would also show a route on the map for all of the places that exist in that package. Unfortunately we realised that the route plug in for this API was deprecated and very unlikely that we would be able to add this feature. A member of our group did email the the developer, however we had to come up with a back up plan which was to add the FlyToInterpolator from React Map. Using this feature would allow the user to click on the icon and the FlyToInterpolator would zoom into the that location on the map.
+
+I also spent this day working with another member of the group, to render each day separately in the daily itinerary. The correct places were showing but they were taking up the whole screen. The intention was to use a carousel, but because of the way the data was set up this was not possible. A solution was to add a button for each day of the tour. With lots of conditional rendering, and filters on the GET request we were able only render the amount of buttons depending on the duration of that package, and also only render the activity for the day selected, with Day 1 being the default.
+
+The last day was mainly spent seeding the database with all the places, as prior to this we only had two pacakges with full data sets. 
+
