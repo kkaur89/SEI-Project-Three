@@ -163,7 +163,7 @@ We also worked on the authorization controller for the user registration and log
 
 After we tested that all routes worked in Insomnia, we installed the front end section together and attempted rendering an interactive map which would be later used to render all places as icons on the map. We installed the front end by running ```npx create-react-app client —template cra-template-ga-ldn-projects```, and then updated the port to match the backend.
 
-For the interactive map, we used the MapBox API and saved our token in our .env file. The Viewport was set to the long and lat of Iceland, and each place that was seeded was rendered as an icon on the map. If you click on the icon, a card appears with the three tabs with information about that place. This was the first time using Bootstrap, so it took some time getting used to the imports at the top from Bootstrap in order for the Card to render.
+For the interactive map, we used the MapBox API and saved our token in our .env file. The Viewport was set to the long and lat of Iceland, and each place that was seeded was rendered as an icon on the map. If you click on the icon, a card appears with the three tabs with information about that place. This was the first time using Bootstrap and found it fairly straightforward to implement into the project.
 
 ![Screenshot 2021-05-04 at 09 32 35](https://user-images.githubusercontent.com/77445688/116978524-b9bd8800-acbb-11eb-83eb-4fe8ffb5fbba.png)
 
@@ -325,4 +325,4 @@ The last day was mainly spent seeding the database with all the places, as prior
 - Fix the bugs
 - Add responsive design
 - Allow users to make a custom packages based on their saved locations.
-- 
+- Review the structure of the data to allow for much simpler code in the front end.
