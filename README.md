@@ -239,9 +239,9 @@ This was the first major hurdle I had come across is that the above and below co
 
 After a while of not being able to fix this solution, I spent the rest of my time working on the data that we would need to seed at the end as well as styling the map and the container that would hold the info of the intinerary.
 
-### Day Six adn Seven - Troubleshooting
+### Day Six and Seven - Troubleshooting
 
-This day was spent trying find a way to connect the places to the packages model so that we could render them both on the front end. Myself and Paddy worked together on the ShowPackage page whilst the other members worked on rendering a list of packages in a sepereate component. We had to add more fields to each of the models for the relationship to work. The places model was refactored to the below:
+This day was spent trying find a way to connect the places to the packages model so that we could render them both on the front end. Two of us worked together on the ShowPackage page whilst the other members worked on rendering a list of packages in a separate component. We had to add more fields to each of the models for the relationship to work. The places model was refactored to the below:
 
 **Places Model Update:**
 
