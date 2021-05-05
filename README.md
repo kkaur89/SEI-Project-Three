@@ -303,21 +303,26 @@ This day was spent refining each of the components we had managed to render succ
 
 I also spent this day working with another member of the group, to render each day separately in the daily itinerary. The correct places were showing but they were taking up the whole screen. The intention was to use a carousel, but because of the way the data was set up this was not possible. A solution was to add a button for each day of the tour. With lots of conditional rendering, and filters on the GET request we were able only render the amount of buttons depending on the duration of that package, and also only render the activity for the day selected, with Day 1 being the default.
 
-The last day was mainly spent seeding the database with all the places, as prior to this we only had two pacakges with full data sets. 
+The last day was mainly spent seeding the database with all the places, as prior to this we only had two packages with full data sets. 
 
 ## Bugs
 
-- Currently the 7th and 8th package are not rendering, but were at the time of submission.
+- Currently the 7th and 8th package is not rendering, but were at the time of submission.
 - For the package page, not all packages render the correct amount of buttons.
 
 ## Challenges
 
-- The showpage which is the page that renders each tour and the daily intinerary was the biggest challenge, there was a lot of functionality that needed to happen on this page, and I didn't fully appreciate how much work it would take.
+- The showpage which is the page that renders each tour and the daily itinerary was the biggest challenge, there was a lot of functionality that needed to happen on this page, and I didn't fully appreciate how much work it would take.
 - Relying on public APIs - the Route plugin for Mapbox was a challenge as it meant that we needed to re-think the main feature of our site.
 - The dataset, a lot of time was spent manually seeding this data. On reflection we could have used a public API for some of the data such as attractions. I did try and look into free APIs for hotels but a lot of them required permission and use of a key, and at the time I thought it would be easier to seed our own data.
-- **Deployment:** Deploying our project was probably the biggest challenge of the project. A whole day by the whole team was spent on trying to deploy the backend via Heroku and the front end on Netlify. The main issue was that Heroku no longer supports MongoDB and therefore we had to install Mongo Atlas and rely on recent Stack Overflow/Yourtube/Media posts on how to get Heroku to talk to MongoDB. After finally managing to deploy the projet in Heroku we hit another snag on Netlfy hwere our interactive Map was not rendering. I found a comment on stack overflow which advised to downgrade react-map-gl to an older version 5.2.5, which seemed to do the trick.
+- **Deployment:** Deploying our project was probably the biggest challenge of the project. A whole day by the whole team was spent on trying to deploy the backend via Heroku and the front end on Netlify. The main issue was that Heroku no longer supports MongoDB and therefore we had to install Mongo Atlas and rely on recent Stack Overflow/Youtube/Media posts on how to get Heroku to talk to MongoDB. After finally managing to deploy the project in Heroku we hit another snag on Netlify where our interactive Map was not rendering. I found a comment on stack overflow which advised to downgrade react-map-gl to an older version 5.2.5, which seemed to do the trick.
 
 ## Wins
-- Overall I am very happy with the site, I love the styling and the features we mananaged to implement. 
-- I learn't a lot from my team members, I was not the most confident with the front end functionality and my team were there to support whenever I needed them. 
+- Overall I am very happy with the site, I love the styling and the features we managed to implement. 
+- I learned a lot from my team members, I was not the most confident with the front end functionality and my team were there to support whenever I needed them.
+
+## Future Improvements
+- Fix the bugs
+- Add responsive design
+- Allow users to make a custom packages based on their saved locations.
 - 
