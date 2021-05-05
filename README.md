@@ -23,6 +23,8 @@ Explore the full site **[here](https://icelander.netlify.app)**. A login is requ
 - password: pass
 
 ![Screenshot 2021-05-02 at 14 42 16](https://user-images.githubusercontent.com/77445688/116815390-413cb700-ab55-11eb-8c20-7cd8299fad6b.png)
+![Screenshot 2021-05-05 at 12 59 06](https://user-images.githubusercontent.com/77445688/117137639-e2b84880-ada1-11eb-828e-3bfe0b0a1c3c.png)
+![Screenshot 2021-05-05 at 12 59 24](https://user-images.githubusercontent.com/77445688/117137647-e77cfc80-ada1-11eb-8035-2424128db44e.png)
 
 ## Project Brief
 
