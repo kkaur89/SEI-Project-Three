@@ -412,6 +412,13 @@ background: rgb(194, 182, 182);
 .is-danger {
   border: solid red 4px;
 }
+
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 //! Login
 
 #login-section {
